@@ -34,7 +34,7 @@ contract CrowdFunding{
         require(msg.sender == OwnerAddress);
         _;
     }
-    function Fund() public payable DeadlineNotReached GoalNotCompleted{
+    function Fund() public payable DeadlineNotReached{
         address AB = msg.sender;
         SendersList.push(msg.sender);
         SendersMapping[AB] = SendersMapping[AB] +  msg.value;
